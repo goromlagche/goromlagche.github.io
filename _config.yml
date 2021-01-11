@@ -2,3 +2,4 @@ title: Users/mrinmoy
 theme: jekyll-theme-hacker
 description: Mrinmoy's home
 markdown: GFM
+show_downloads: false

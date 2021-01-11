@@ -1,8 +1,4 @@
-* * *
-
-# > /Users/mrinmoy
-
-* * *
+# INTRO(1)
 
 ## NAME
 
