@@ -19,9 +19,9 @@ I have primarily worked with ruby and rails ecosystem most of my career. Also ha
 ## MORE INFO
 
 My online foot print:
-[GitHub](https://github.com/goromlagche) - Some of the Open Source code I have written and contributed.
-[Twitter](https://twitter.com/goromlagche) - Of all social networks, I spent sometime here(on read mode)
+- [GitHub](https://github.com/goromlagche) - Some of the Open Source code I have written and contributed.
+- [Twitter](https://twitter.com/goromlagche) - Of all social networks, I spent sometime here(on read mode)
 
 ## CONTACT METHODS
 
-email - You can reach me at, mrinmoy dot das91 *at* gmail *dot* com
+- email - You can reach me at, mrinmoy *dot* das91 *at* gmail *dot* com
