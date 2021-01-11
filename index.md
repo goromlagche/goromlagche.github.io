@@ -28,4 +28,4 @@ My online foot print:
 
 ### CONTACT METHODS
 
-- email - You can reach me at, mrinmoy *dot* das91 *at* gmail *dot* com
+- email - You can reach me at,  `mrinmoy dot das91 at gmail dot com`
