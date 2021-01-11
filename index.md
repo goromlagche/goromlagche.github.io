@@ -1,4 +1,8 @@
-# INTRO(1)
+---
+layout: default
+---
+
+## INTRO(1)
 
 ### NAME
 
