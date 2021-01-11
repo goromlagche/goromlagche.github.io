@@ -1,5 +1,4 @@
-title: /Users/mrinmoy
-theme: jekyll-theme-cayman
+title: Users/mrinmoy
+theme: jekyll-theme-hacker
+description: Mrinmoy's home
 markdown: GFM
-github:
-  is_project_page: false
