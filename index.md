@@ -14,7 +14,7 @@ goromlagche
 
 ### DESCRIPTION
 
-I have been working with web technologies for close to 8 years. As a consultant, I have worked with small to medium startups, across multiple domains, working on web applications, building MVPs, optimizing, and fixing existing codebase.
+As a consultant, I have worked with small to medium startups, across multiple domains, working on web applications, building MVPs, optimizing, and fixing existing codebase.
 
 I believe in writing clean, readable, simple code and refactoring for performance as and when necessary.
 
