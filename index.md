@@ -25,6 +25,7 @@ I have primarily worked with ruby and rails ecosystem most of my career. Also ha
 My online foot print:
 - [GitHub](https://github.com/goromlagche) - Some of the Open Source code I have written and contributed.
 - [Twitter](https://twitter.com/goromlagche) - Of all social networks, I spend some of my time here(on read mode)
+- [Linkedin](https://www.linkedin.com/in/mrinmoy-das-3035387b) - A sparsely updated professional profile.
 
 ### CONTACT METHODS
 
