@@ -22,5 +22,6 @@ I'd be happy if any of you find them useful too.
       {% endif %}
 
     {% endunless %}
+   {% include archive-single.html %}
   {% endfor %}
 </ul>
