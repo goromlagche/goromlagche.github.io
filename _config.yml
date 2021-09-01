@@ -1,12 +1,14 @@
 locale : en-US
 encoding: utf-8
 markdown_ext: markdown,mkdown,mkdn,mkd,md
+github: [metadata]
 
 title: /Users/mrinmoy
 description: Mrinmoy's home
 name: Mrinmoy Das
 
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 words_per_minute: 200
 
