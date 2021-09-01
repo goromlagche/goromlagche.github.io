@@ -1,17 +1,17 @@
 ---
 layout: posts
-title:  "Traversing a single or array of object"
+title:  "Traversing a single or an array of objects"
 date:   2021-09-01 16:57:47 +0530
 layout: single
 author_profile: true
 comments: true
 tags: [ruby, pattern, xml]
 ---
-I will explain a simple pattern to process a single or array of objects uniformly. Since ruby is not a strongly typed language(< ruby 3), the burden lies on the implementor.
+I will explain a simple pattern to process a single or an array of objects uniformly. Since ruby is not a strongly typed language(< ruby 3), the burden may lie on the input function.
 
 I will start with an example.
 
-Let say we need to parse a XML schema. Which may or may not have repeating block
+Let say we need to parse an XML schema. Which may or may not have a repeating block.
 
 Example 1
 ``` xml
@@ -46,7 +46,7 @@ def fetch_descriptions_1(raw_data:)
 end
 ```
 
-Next lets try to actually fetch the descriptions. Since comment can be both a `single object` and an `array of objects`. We can use a simple if-else clause for this
+Next, let us try to fetch the descriptions. Since comment can be both a `single object` or an `array of objects`. We can use a simple if-else clause for this.
 
 ``` ruby
 def fetch_descriptions_1(raw_data:)
@@ -59,9 +59,11 @@ def fetch_descriptions_1(raw_data:)
 end
 ```
 
-The above, perfectly handles the volatile nature of the input data.
+The above perfectly handles the volatile nature of the input data.
 
-But we can do this in a simpler manner. If we put the single_comment inside an array. Then we will only need to handle a single input type, `array of objects`.
+But we can do this in a better manner. There is an opportunity to refactor.
+
+Consider this, if we put the single_comment inside an array, then we will only need to handle a single input type, `array of objects`.
 
 ``` ruby
 def fetch_descriptions_2(raw_data:)
