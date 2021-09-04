@@ -5,7 +5,7 @@ date:   2021-09-01 16:57:47 +0530
 layout: single
 author_profile: true
 comments: true
-tags: [ruby, pattern, xml]
+tags: [ruby, refactoring, xml]
 ---
 I will explain a simple pattern to process a single or an array of objects uniformly. Since ruby is not a strongly typed language(< ruby 3), the burden may lie on the input function.
 
