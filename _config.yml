@@ -21,9 +21,11 @@ author:
   stackoverflow : 2365673/goromlagche
   twitter       : goromlagche
 
+repository: goromlagche/goromlagche.github.io
 comments:
+  provider: "utterances"
   utterances:
-    theme      : github-dark
+    theme      : github-light
     issue_term : pathname
 
 tag_archive:
@@ -51,7 +53,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true # true
+      comments: true
       share: true
       related: true
 
