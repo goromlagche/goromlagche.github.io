@@ -7,7 +7,7 @@ title: /Users/mrinmoy
 description: Mrinmoy's home
 name: Mrinmoy Das
 
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minimal-mistakes-jekyll
 
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 words_per_minute: 200
