@@ -1,6 +1,7 @@
 ---
 layout: posts
 title:  "Ruby 2D array assignment gotcha"
+excerpt: Ruby 2D array initialization gotcha.
 date:   2021-09-04 16:57:47 +0530
 layout: single
 author_profile: true
