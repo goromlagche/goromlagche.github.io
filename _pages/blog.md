@@ -6,7 +6,7 @@ author_profile: true
 comments: true
 ---
 
-Most of the posts are technical, written mainly for my own reference. Collected throughout my day to day work. Most of them are TILs, not long form blogs.
+Most of the posts are technical, written mainly for my own reference. Collected throughout my day to day work, a running journal. Most of them are TILs, not long form blogs.
 
 I'd be happy if any of you find them useful too.
 
