@@ -62,12 +62,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
   - jekyll-seo-tag
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
   - jeky-seo-tag
 
 include:

@@ -283,8 +283,9 @@ DEPENDENCIES
   jekyll-feed
   jekyll-include-cache
   jekyll-paginate
+  jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
 
 BUNDLED WITH
-   2.2.26
+   2.2.27

@@ -1,7 +1,9 @@
 ---
 title:  "Blog"
 layout: archive
-permalink: /Blog/
+permalink: /blog
+redirect_from:
+  - /Blog/
 author_profile: true
 comments: true
 ---

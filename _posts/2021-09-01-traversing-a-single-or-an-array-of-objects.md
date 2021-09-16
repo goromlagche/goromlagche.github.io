@@ -2,6 +2,10 @@
 layout: posts
 title:  "Traversing a single or an array of objects"
 excerpt: A simple design pattern to process a single or an array of objects uniformly
+permalink: /blog/:year/:month/:day/:title.html
+redirect_from:
+  - /traversing-a-single-or-an-array-of-objects
+  - /traversing-a-single-or-an-array-of-objects/
 date:   2021-09-01 16:57:47 +0530
 layout: single
 author_profile: true

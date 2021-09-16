@@ -3,6 +3,10 @@ layout: posts
 title:  "Autocomplete Class name in Emacs"
 excerpt: Generate the UpperCamelCase version of file_name in 1 line of elisp. Combined with yasnippet, we can autocomplete class name of ruby(or any other lang) file.
 date:   2021-09-11 18:35:47 +0530
+permalink: /blog/:year/:month/:day/:title.html
+redirect_from:
+  - /emacs-autocomplete-class-name
+  - /emacs-autocomplete-class-name/
 layout: single
 author_profile: true
 comments: true
