@@ -57,6 +57,7 @@ defaults:
       comments: true
       share: true
       related: true
+      permalink: /blog/:year/:month/:day/:title.html
 
 plugins:
   - jekyll-paginate

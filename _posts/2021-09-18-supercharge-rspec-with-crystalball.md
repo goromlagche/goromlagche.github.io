@@ -2,6 +2,9 @@
 layout: posts
 title:  "Supercharge tests with circle-ci & crystalball [Part 1]"
 excerpt: Slash test suite running time by using circle-ci parallel runs, splitting the test suite by timing data. Add crystalball magic to further boost the test run time
+redirect_from:
+  - /supercharge-rspec-with-crystalball
+  - /supercharge-rspec-with-crystalball/
 date:   2021-09-18 17:18:47 +0530
 layout: single
 tags: [rspec, rails, crystalball, circle-ci, ruby]
