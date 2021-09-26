@@ -7,9 +7,13 @@ redirect_from:
   - /supercharge-rspec-with-crystalball/
 date:   2021-09-18 17:18:47 +0530
 layout: single
-tags: [rspec, rails, crystalball, circle-ci, ruby]
+tags: [rspec, rails, crystalball, circle-ci, ruby, crystalball-circle-ci-series]
 ---
 We will explore how to optimize your test suite using [Crystalball](https://github.com/toptal/crystalball) test selection library, to reduce the test run time, down to a minute. This blog post is an attempt to document my own experience of setting up crystalball alongside circle-ci parallel runs.
+
+This is **Part 1** of this series.
+
+You can find all the links to this series [here]({{ site.baseurl }}/tags/#crystalball-circle-ci-series)
 
 ## Background
 
@@ -29,7 +33,7 @@ Thankfully in ruby world, there is already a ready-made solution available.
 1. The [documentation](https://toptal.github.io/crystalball/) is pretty detailed.
 2. This [presentation](https://rubykaigi.org/2019/presentations/p0deje.html) at ruby kaigi is a great demonstration of the features.
 
-## Setup Circle-CI
+## Setup Circle-CI config
 
 Circle-CI provides parallel runs based on automatic test splitting based on multiple strategies. Their [documentation](https://circleci.com/docs/2.0/parallelism-faster-jobs/) provides details on this.
 
@@ -46,25 +50,24 @@ executors:
 jobs:
   rspec:
     executor: rspec-executor
-    parallelism: 3
+    parallelism: 5
     steps:
-      - run: bundle exec rails db:reset
       - run:
             name: Run rspec in parallel
             command: |
               TESTFILES=$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
               bundle exec rspec --format progress \
-                                --no-color \
                                 --format RspecJunitFormatter \
-                                --out ~/tmp/test-results/rspec/rspec.xml \
+                                --out ~/test-results/rspec/rspec.xml \
                                 ${TESTFILES}
-      - store_the_test_results
+      - store_test_results:
+          path: ~/test-results
 
 workflows:
   ci:
-    - rspec
+    - rspec:
       ...
-      ..
+      ...
 ```
 
 
@@ -87,7 +90,8 @@ gem install crystalball
 Since we are running our specs in parallel, multiple mapping files will be generated. Hence it is important to store all of them in a folder. That can be defined in `config/crystalball.yml` file.
 
 ``` yaml
-execution_map_path: 'tmp/crystalball`  # Default: `tmp/crystalball_data.yml`
+# Default: `tmp/crystalball_data.yml`
+execution_map_path: crystalball
 ```
 
 In the `spec/spec_helper.rb`, we will define all the strategies
@@ -109,4 +113,4 @@ end
 
 Once all of this is done, we will need to make **Crystalball** play nice with **Circle-CI**.
 
-That will be a code heavy post, which I will take up in **Part 2** of this series.
+That will be a code heavy post, which I will take up in [Part-2]({{ site.baseurl }}{% link _posts/2021-09-26-storing-crystalball_data-as-a-circle-ci-artifact.md %}) of this series.
