@@ -1,0 +1,26 @@
+---
+title:  "Blog"
+layout: archive
+redirect_from:
+- /Blog/
+author_profile: true
+---
+
+<p>Most of the posts are technical, written mainly for my own reference. Collected throughout my day to day work, a running journal. Most of these are TILs, not long form blogs.</p>
+
+<p>I’d be happy if any of you find them useful too.</p>
+
+{% if paginator %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+  {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}

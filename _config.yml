@@ -32,9 +32,8 @@ tag_archive:
   type: liquid
   path: /tags/
 
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate: 5
+paginate_path: /blog/page:num
 
 search              : true
 search_full_content : true
