@@ -88,6 +88,10 @@ Since this rake task is piping the output to `circleci` cli, it is important to 
 
 Ok now we have this setup, next up we have to tackle the most important thing. Retrieving `crystalball_data.yml` files which store the mapped data between tests and the application code.
 
+To do this, we will be using the env variable `CRYSTALBALL_BUILD_NUM` stored on the job `store_crystalball_build_num` discussed in [Part-2]({{ site.baseurl }}{% link _posts/2021-09-26-storing-crystalball_data-as-a-circle-ci-artifact.md %}).
+
+Let's look at the code.
+
 ``` ruby
 class CrystalballCiService
   CRYSTALBALL_FILE_PATH = 'crystalball/crystalball_data'.freeze
