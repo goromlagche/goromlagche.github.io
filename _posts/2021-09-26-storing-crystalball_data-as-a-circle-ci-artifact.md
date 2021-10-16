@@ -104,7 +104,7 @@ jobs:
       - run:
           name: Stash crystalball results
           command: |
-            if [[ "$CRYSTALBALL" == "true" ]]; then
+            if [[ -e ~/tmp/crystalball_data.yml ]]; then
               mkdir -p crystalball
               cp -R ~/tmp/crystalball_data.yml ~/crystalball/crystalball_data-${CIRCLE_NODE_INDEX}.yml
             end
@@ -181,6 +181,6 @@ Now we can
 2. Store the crystalball mapping files in a circle-ci artifact.
 3. Store the build number of the job which pushes the map files to an artifact.
 
-In the next part I will discuss retrieving crystalball map files and use the same to run a minimal number of tests required for a non-master branch.
+Next in [Part-3]({{ site.baseurl }}{% link _posts/2021-10-16-download-artifacts-from-circle-ci.md %}) I will discuss retrieving crystalball map files and use the same to run a minimal number of tests required for a non-master branch.
 
 Stay tuned! :heart:
