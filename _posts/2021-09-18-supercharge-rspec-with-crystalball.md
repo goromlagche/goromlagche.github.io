@@ -92,6 +92,7 @@ Since we are running our specs in parallel, multiple mapping files will be gener
 ``` yaml
 # Default: `tmp/crystalball_data.yml`
 execution_map_path: crystalball
+diff_from: origin/master
 ```
 
 In the `spec/spec_helper.rb`, we will define all the strategies

@@ -146,6 +146,6 @@ Now we have enough code to
 1. Run entire spec suite in master branch.
 2. Run only the minimal set of tests required for a non-master branch.
 
-In the next part, which will be a bonus post. I will discuss why and how we should/can run the entire test suite once a PR is ready for code review.
+In the next part [Part-4]({{ site.baseurl }}{% link _posts/2021-10-23-trigger-circle-ci-using-github-actions.md %}), which will be a bonus post. I will discuss why and how we should/can run the entire test suite once a PR is ready for code review.
 
 Stay tuned! :heart:
