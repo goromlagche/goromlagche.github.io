@@ -50,7 +50,7 @@ And to run the query we can use `ActiveRecord::Base.connection.execute`
 
 ![raw_sql_1](/assets/images/raw_sql_1_2021-11-07-02:51:36.png)
 
-But that is prone to sql injection
+But that is prone to sql injection.
 
 ![raw_sql_2](/assets/images/raw_sql_2_2021-11-07-02:52:01.png)
 
