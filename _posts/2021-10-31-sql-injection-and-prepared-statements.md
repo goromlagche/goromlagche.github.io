@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Sql injection and prepared statements"
+title:  "Sql :syringe:  with prepared statements"
 excerpt: We will explore how to be safe against sql injection attacks.
 date:   2021-11-07 03:00:47 +0530
 layout: single
