@@ -64,7 +64,7 @@ There are roughly two well-known safe-guards present to solve this.
 
 We can quote the column value to help prevent sql injection.
 
-ActiveRecord provides us with [ActiveRecord::Base.connection.quote](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/Quoting.html#method-i-quote)
+ActiveRecord provides us with [ActiveRecord::Base.connection.quote](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/Quoting.html#method-i-quote).
 
 ![quoting](/assets/images/quoting_2021-11-07-02:58:40.png)
 
@@ -77,22 +77,23 @@ In most DBMS we can use a prepared statement, which pre-compiles the SQL query, 
 
 It is a server-side object that can be used to optimize performance, reducing/eliminating SQL injection attacks.
 
-Postgresql support PREPARED statement, you can read more about it [here](https://www.postgresql.org/docs/9.3/sql-prepare.html)
+Postgresql support PREPARED statement, you can read more about it [here](https://www.postgresql.org/docs/9.3/sql-prepare.html).
 
-Let us fire up the psql shell and use PREPARED statements
+Let us fire up the psql shell and use PREPARED statements.
 
 ![bind_query](/assets/images/bind_query_2021-11-07-03:25:20.png)
 
-We can check the pg log
+We can check the pg log.
 
 ![pg_log_1](/assets/images/pg_log_1_2021-11-07-03:22:08.png)
 
-Back to rails. How do we achieve this using ActiveRecord
+Back to rails. How do we achieve this using ActiveRecord?
+
 Well ActiveRecord has [find_by_sql](https://api.rubyonrails.org/v6.1.4/classes/ActiveRecord/Querying.html#method-i-find_by_sql) method, which helps us with this.
 
 ![find_by_sql](/assets/images/find_by_sql_2021-11-07-03:11:15.png)
 
-Let us check the pg log
+Let us check the pg log.
 
 ![pg_log_2](/assets/images/pg_log_2_2021-11-07-03:33:47.png)
 
