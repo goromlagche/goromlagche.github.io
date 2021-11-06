@@ -14,8 +14,6 @@ But sometimes we might need to venture out of the usual path and write our own q
 
 For example, let us say we need to find the distance between two coordinates or words. In these cases, there is no ready-made help available from `active-record`. We will need to write custom sql queries.
 
-We can use trigram search for that. And Postgres has [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) module which provides us with the necessary tools.
-
 Let us move on to a concrete example.
 
 ## Seed Database
@@ -46,7 +44,7 @@ Now that we have the database setup, let us define the task at hand.
 
 **We would like to grab the 5 closest matches for an user input word.**
 
-We can use `pg_trgm` for this. The `<->` operator Returns the 'distance' between the arguments.
+We can use trigram search for this. And Postgres has [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) module which provides us with the necessary tools. The `<->` operator Returns the 'distance' between the arguments.
 
 And to run the query we can use `ActiveRecord::Base.connection.execute`
 
