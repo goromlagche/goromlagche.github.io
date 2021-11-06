@@ -6,7 +6,7 @@ date:   2021-11-07 03:00:47 +0530
 layout: single
 tags: [rails, postgresql]
 ---
-We will explore how to be safe against sql injection attacks. Using bound parameters and prepared statements.
+We will explore how to be safe against sql :syringe: attacks. Using bound parameters and prepared statements.
 
 Most of the time when interacting with the database from rails application. We use `ActiveRecord` and most of the time we can just use the ORM to generate the sql query.
 
