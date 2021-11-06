@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Sql :syringe:  with prepared statements"
+title:  "Sql injection  with prepared statements"
 excerpt: We will explore how to be safe against sql injection attacks.
 date:   2021-11-07 03:00:47 +0530
 layout: single
@@ -40,7 +40,7 @@ Time to write some code to seed the database with the dictionary.
 
 We have successfully seed the database with `102774` records.
 
-## SQL Injection
+## SQL :syringe:
 
 Now that we have the database setup, let us define the task at hand.
 
