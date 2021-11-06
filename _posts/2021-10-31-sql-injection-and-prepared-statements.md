@@ -56,7 +56,7 @@ But that is prone to sql injection
 
 ![raw_sql_2](/assets/images/raw_sql_2_2021-11-07-02:52:01.png)
 
-There are roughly two well-known safe-guards present to solve this.
+There are roughly two well-known safe-guards are present to solve this.
 1. Quoting
 2. Bind Parameters
 
