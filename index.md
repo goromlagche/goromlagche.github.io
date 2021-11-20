@@ -9,7 +9,7 @@ title: Hello, world!
 ---
 
 <br>
-As a consultant, I have worked with small to medium startups, across multiple domains, working on web applications, building MVPs, optimizing, and fixing existing legacy codebase.
+As a consultant, I have worked with small to medium startups to unicorns, across multiple domains, across the globe. Mostly working on web applications, building MVPs, optimizing, and fixing existing legacy codebase.
 
 I have been working Remotely most of my career. I actually have worked with organizations from 6 different countries, so far.
 
