@@ -2,7 +2,7 @@
 layout: posts
 title:  "Implementing cursor-based pagination"
 excerpt: We will implement a cursor-based pagination module, also discuss about some gotchas for handling UUIDs
-date:   2022-01-26 18:38:47 +0530
+date:   2022-01-26 18:49:47 +0530
 layout: single
 tags: [database, postgres, rails, active_record, pagination]
 ---
