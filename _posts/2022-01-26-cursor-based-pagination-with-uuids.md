@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Implementing a cursor-based pagination module"
+title:  "Implementing cursor-based pagination"
 excerpt: We will implement a cursor-based pagination module, also discuss about some gotchas for handling UUIDs
 date:   2022-01-26 18:38:47 +0530
 layout: single
