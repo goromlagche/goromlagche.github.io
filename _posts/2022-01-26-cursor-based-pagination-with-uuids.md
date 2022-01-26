@@ -10,7 +10,7 @@ Pagination is ubiquitous while working with web applications. Although it is sim
 
 ## Premise
 
-[Kaminari](https://github.com/kaminari/kaminari) is a very popular and awesome pagination library in the ruby world. It is very simple to use and integrate it into your project.
+[Kaminari](https://github.com/kaminari/kaminari) is a very popular and an awesome pagination library in the ruby world. It is very simple to use and integrate it into your project.
 
 But as soon as your project starts to get some traction and reaches some amount of scale, you will start to notice certain issues.
 
