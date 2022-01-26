@@ -58,7 +58,7 @@ Well, using a timestamp field is still not a full-proof solution.
 
 Postgres timestamp fields allow up to 6 fraction digits in seconds field. This roughly means the timestamp is accurate up to microseconds. If you have multiple records created at the same time, up to the same microsecond, this becomes a problem. Although the chances of this happening are pretty slim, still it can happen.
 
-To fully solve this problem, I believe we can use a secondary `id` field, we can set it to `autoincrement`/create a `sequence`. And use that field for ordering. We can only use the integer field for an autoincrement sequence. Even if we set it to `bigint` there is a possibility, we might run out of numbers to allocate. In that case, we can create `id_v1`, `id_v2` and so on..
+To fully solve this problem, we can use a secondary `id` field, we can set it to `autoincrement`/create a `sequence`. And use that field for ordering. We can only use the integer field for an autoincrement sequence. Even if we set it to `bigint` there is a possibility, we might run out of numbers to allocate. In that case, we can create `id_v1`, `id_v2` and so on..
 
 Ok, enough of HLD system design talk, let us get back to the problem at hand. For this article, I will just use `created_at` for ordering.
 
