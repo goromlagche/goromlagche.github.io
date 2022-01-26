@@ -30,9 +30,7 @@ Unfortunately, Kaminari does not have a solution for this, at this moment.
 
 ## The Solution
 
-It turns out solving this problem is not that difficult. It can be done in less than 100 lines of ruby.
-
-Enough talk show me the code   :point_right:   [gist](https://gist.github.com/goromlagche/d2075bc8ad8fedd3a9930cd9f3c38ae4).
+It turns out solving this problem is not that difficult. It can be done in less than 100 lines of ruby [gist](https://gist.github.com/goromlagche/d2075bc8ad8fedd3a9930cd9f3c38ae4).
 
 ### Ordering
 
