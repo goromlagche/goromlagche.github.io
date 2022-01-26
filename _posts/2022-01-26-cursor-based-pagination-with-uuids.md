@@ -104,33 +104,31 @@ Let us see the code first, then we can dig deep
 
 ``` ruby
 def paginated_records
-  return @paginated_records if defined? @paginated_records
+  paginated_records = records
+                        .where(pagination_window)
+                        .order(created_at: order_direction)
+                        .limit(limit + 1)
+                        .to_a
 
-  @paginated_records = @records
-                         .where(pagination_window)
-                         .order(created_at: order_direction)
-                         .limit(@limit + 1)
-                         .to_a
-
-  @seek = (@paginated_records.size > @limit)
-  @paginated_records.pop if @seek == true
-  @paginated_records.reverse! if @params[:direction] == "prev"
-  @paginated_records
+  seek = (paginated_records.size > limit)
+  paginated_records.pop if seek == true
+  paginated_records.reverse! if params[:direction] == "prev"
+  paginated_records
 end
 
 def order_direction
-  return :asc if @params[:direction] == 'prev'
+  return :asc if params[:direction] == 'prev'
 
   :desc
 end
 
 def pagination_window
-  return if @params[:cursor_created_at].blank?
+  return if params[:cursor_created_at].blank?
 
-  if @params[:direction] == "prev"
-    @records.arel_table[:created_at].gt(@params[:cursor_created_at])
+  if params[:direction] == "prev"
+    records.arel_table[:created_at].gt(params[:cursor_created_at])
   else
-    @records.arel_table[:created_at].lt(@params[:cursor_created_at])
+    records.arel_table[:created_at].lt(params[:cursor_created_at])
   end
 end
 ```
@@ -179,23 +177,23 @@ Will return
 When going `prev` we will need to reverse the fetched records one more time. To get the desired result. Hence the line
 
 ``` ruby
-@paginated_records.reverse! if @params[:direction] == "prev"
+paginated_records.reverse! if params[:direction] == "prev"
 ```
 
 ### Pagination URLs
 
 We will need to provide `next_url` and `prev_url` for the frontend to consume.
 
-Fetching `@limit + 1` is particularly helpful, when creating prev/next urls.
+Fetching `limit + 1` is particularly helpful, when creating prev/next urls.
 
 ``` ruby
 def pagination_url(direction:)
-  return "" if @seek == false && direction == @params[:direction]
-  return "" if @params[:cursor_created_at].blank? && direction == "prev" # first page
+  return "" if seek == false && direction == params[:direction]
+  return "" if params[:cursor_created_at].blank? && direction == "prev" # first page
 
   cursor = direction == "prev" ?  paginated_records.first : paginated_records.last
 
-  uri = URI(@url)
+  uri = URI(url)
   params = Hash[URI.decode_www_form(uri.query || "")]
              .merge("cursor_created_at" => cursor.created_at.iso8601(6), # PG default is 6
                     "direction" => direction)
